@@ -24,7 +24,7 @@ class ProductController extends AbstractController
           'battery' => '30 hours','image' => 'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=800'
         ];
 
-		$form = $this->createForm(AddToCartType::class);
+		$form = $this->createForm(ProductFormType::class);
 		$form->handleRequest ($request);
 
 		if ($form->isSubmitted() && $form->isValid()) {
